@@ -1,4 +1,6 @@
 python-docx
 black
 ruff
+fpdf2
+markdown
 

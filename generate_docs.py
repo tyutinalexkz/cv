@@ -6,6 +6,14 @@ from docx.oxml.shared import OxmlElement
 from docx.oxml.ns import qn
 import re
 
+try:
+    from fpdf import FPDF
+    import markdown
+
+    HAS_PDF_TOOLS = True
+except ImportError:
+    HAS_PDF_TOOLS = False
+
 
 def add_hyperlink(paragraph, url, text):
     # Get access to the document.xml.rels file and get a new relation id value
@@ -127,4 +135,36 @@ def parse_markdown(md_file, docx_file):
 
 
 if __name__ == "__main__":
-    parse_markdown("Alexander_Tyutin_CV_Updated.md", "Alexander_Tyutin_CV.docx")
+    docx_filename = "cv.docx"
+    pdf_filename = "cv.pdf"
+    parse_markdown("cv.md", docx_filename)
+
+    if HAS_PDF_TOOLS:
+        print(f"Generating {pdf_filename} from markdown...")
+        with open("cv.md", "r", encoding="utf-8") as f:
+            text = f.read()
+
+        # Clean up unicode characters not supported by default FPDF font
+        text = (
+            text.replace("—", "-")
+            .replace("’", "'")
+            .replace("“", '"')
+            .replace("”", '"')
+            .replace("…", "...")
+        )
+
+        html = markdown.markdown(text)
+        
+        # Increase line spacing with inline CSS
+        html = html.replace("<p>", "<p style='line-height: 1.2'>")
+        # For bulleted lists, we wrap the content in a <p> with line-height and add a <br>
+        html = html.replace("<li>", "<li style='line-height: 0.0'>").replace("</li>", "<br></li>")
+
+        pdf = FPDF()
+        pdf.add_page()
+        pdf.set_font("Helvetica", size=11)
+        pdf.write_html(html)
+        pdf.output(pdf_filename)
+        print("Done generating", pdf_filename)
+    else:
+        print("fpdf2 or markdown is not installed. Skipping PDF generation.")
