@@ -3,4 +3,4 @@ black
 ruff
 fpdf2
 markdown
-
+pylint

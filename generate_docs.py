@@ -1,10 +1,14 @@
+"""
+This module generates a Word document (DOCX) and a PDF from a Markdown CV.
+"""
+
+import re
 import docx
+import docx.opc.constants
 from docx.shared import Pt, RGBColor, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
-import docx.opc.constants
 from docx.oxml.shared import OxmlElement
 from docx.oxml.ns import qn
-import re
 
 try:
     from fpdf import FPDF
@@ -16,6 +20,9 @@ except ImportError:
 
 
 def add_hyperlink(paragraph, url, text):
+    """
+    Adds a hyperlink to a docx paragraph.
+    """
     # Get access to the document.xml.rels file and get a new relation id value
     part = paragraph.part
     r_id = part.relate_to(
@@ -30,26 +37,30 @@ def add_hyperlink(paragraph, url, text):
     new_run = OxmlElement("w:r")
 
     # Create a new w:rPr element
-    rPr = OxmlElement("w:rPr")
+    r_pr = OxmlElement("w:rPr")
 
     # Add color and underline to the run properties
     c = OxmlElement("w:color")
     c.set(qn("w:val"), "0563C1")  # Standard link blue
-    rPr.append(c)
+    r_pr.append(c)
     u = OxmlElement("w:u")
     u.set(qn("w:val"), "single")
-    rPr.append(u)
+    r_pr.append(u)
 
     # Join elements
-    new_run.append(rPr)
+    new_run.append(r_pr)
     new_run.text = text
     hyperlink.append(new_run)
 
+    # pylint: disable=protected-access
     paragraph._p.append(hyperlink)
     return hyperlink
 
 
 def set_style(doc):
+    """
+    Configures the default styles (font, size, color) for the document.
+    """
     style = doc.styles["Normal"]
     font = style.font
     font.name = "Arial"
@@ -76,6 +87,9 @@ def set_style(doc):
 
 
 def process_text_with_links(p, text):
+    """
+    Processes markdown text with links and formatting, adding them to a paragraph.
+    """
     # Regex to find links [text](url) and bold **text** and italic *text*
     # We will split the text into a list of chunks: plain text, links, bolds, italics
     pattern = r"(\[.*?\]\(.*?\)|\*\*.*?\*\*|\*[^\*]+\*)"
@@ -97,6 +111,9 @@ def process_text_with_links(p, text):
 
 
 def parse_markdown(md_file, docx_file):
+    """
+    Reads a markdown file and generates a stylized docx document.
+    """
     doc = docx.Document()
     set_style(doc)
 
@@ -134,7 +151,10 @@ def parse_markdown(md_file, docx_file):
     print("Done generating", docx_file)
 
 
-if __name__ == "__main__":
+def main():
+    """
+    Main execution function: parses the markdown and optionally generates a PDF.
+    """
     docx_filename = "cv.docx"
     pdf_filename = "cv.pdf"
     parse_markdown("cv.md", docx_filename)
@@ -154,11 +174,13 @@ if __name__ == "__main__":
         )
 
         html = markdown.markdown(text)
-        
+
         # Increase line spacing with inline CSS
         html = html.replace("<p>", "<p style='line-height: 1.2'>")
         # For bulleted lists, we wrap the content in a <p> with line-height and add a <br>
-        html = html.replace("<li>", "<li style='line-height: 0.0'>").replace("</li>", "<br></li>")
+        html = html.replace("<li>", "<li style='line-height: 0.0'>").replace(
+            "</li>", "<br></li>"
+        )
 
         pdf = FPDF()
         pdf.add_page()
@@ -168,3 +190,7 @@ if __name__ == "__main__":
         print("Done generating", pdf_filename)
     else:
         print("fpdf2 or markdown is not installed. Skipping PDF generation.")
+
+
+if __name__ == "__main__":
+    main()
