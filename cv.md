@@ -1,6 +1,7 @@
 # Alexander Tyutin
 DevSecOps & Platform Engineer | Cloud & AI Architecture | GDG Almaty Organizer
 Almaty, Kazakhstan
+
 Contact: tyutinalexkz@gmail.com | [LinkedIn](https://www.linkedin.com/in/alexander-tyutin) | [Dev.to](https://dev.to/alexandertyutin)
 
 ## Summary
@@ -20,19 +21,6 @@ Adaptable DevSecOps and Platform Engineer with a proven track record of bridging
 
 ## Experience
 
-### Technovation Kazakhstan
-**Lead AI Platform Architect & Senior Mentor**
-*February 2024 - Present*
-- Identified a human scaling problem — volunteer mentors were too few, overloaded, and time-constrained to serve all teams — independently proposed an AI-powered mentorship platform as the solution, pitched it, and took full end-to-end ownership as CTO, CEO, and CFO; self-funded the entire project (~$150 for the season) and delivered a production AI platform serving 100+ teams across multiple countries.
-- Evolved an initial monolithic Telegram MVP into a distributed Python microservices mesh on GCP Cloud Run, demonstrating that enterprise-grade AI infrastructure does not require enterprise-level spend.
-- Architected a centralized AI Gateway — a dedicated middleware service between all platform clients and Vertex AI — enforcing FinOps (thinking budget controls), OIDC service-to-service authentication, and AI routing policy.
-- Designed asynchronous multimodal orchestration pipelines with Multi-RAG (Speech-to-Text, Translation, Image Synthesis, knowledge retrieval) serving 100+ teams.
-- Built a multi-layered AI security approach: Google Cloud Model Armor integrated into the AI Gateway solution, a custom LLM quality gate deployed as a Cloud Run web service for CI/CD pipeline checks, and a local LLM-based security scanner for developer IDE use.
-- **Mentorship & Community:** Volunteered as a senior mentor for 3 years, consistently leading teams to success, including mentoring global semifinalists and coordinating multiple teams per season.
-- Pioneered the "Open Calendar" initiative, democratizing access to technical and product advice for all teams and mentors across the region.
-**Skills:** Generative AI · Google Cloud Platform (GCP) · FinOps · Microservices Architecture · Product Management · Vertex AI · Python
-
-
 ### Semrush (an Adobe Company)
 **DevSecOps & Platform Engineer**
 *October 2022 - Present*
@@ -41,8 +29,24 @@ Adaptable DevSecOps and Platform Engineer with a proven track record of bridging
 - Prototyped and advocated for embedding security checks directly into the developer IDE (implemented in Technovation AI Platform project; proposing adoption across company teams).
 - Designing an AI-awareness hackathon for engineering teams to demonstrate how to automate security routines and infrastructure checks using Claude Desktop/CLI and local LLMs.
 - Optimized infrastructure security pipelines, focusing on platform resilience, automation, and reducing deployment friction.
-**Skills:** DevSecOps · Software Composition Analysis (SCA) · Ansible · Python · Secure SDLC · Kubernetes · GitLab
 
+**Skills:** Google Cloud Platform · Kubernetes · Secure SDLC · DevSecOps · Software Composition Analysis (SCA) · Ansible · Python · GitLab · Splunk
+
+### Technovation Kazakhstan
+**Lead AI Platform Architect & Senior Mentor**
+*February 2024 - Present*
+Charity Partnership:
+- Identified a human scaling problem — volunteer mentors were too few, overloaded, and time-constrained to serve all teams — independently proposed an AI-powered mentorship platform as the solution, pitched it, and took full end-to-end ownership as CTO, CEO, and CFO; self-funded the entire project (~$150 for the season) and delivered a production AI platform serving 100+ teams across multiple countries.
+- Evolved an initial monolithic Telegram MVP into a distributed Python microservices mesh on GCP Cloud Run, demonstrating that enterprise-grade AI infrastructure does not require enterprise-level spend.
+- Architected a centralized AI Gateway — a dedicated middleware service between all platform clients and Vertex AI — enforcing FinOps, security, and AI routing policy.
+- Designed asynchronous multimodal orchestration pipelines with Multi-RAG (Speech-to-Text, Translation, Image Synthesis, knowledge retrieval) serving 100+ teams.
+- Built a multi-layered AI security approach: Google Cloud Model Armor integrated into the AI Gateway solution, a custom LLM quality gate deployed as a Cloud Run web service for CI/CD pipeline checks, and a local LLM-based security scanner for developer IDE use (along with specified tooling).
+
+Mentorship & Community: 
+- Volunteered as a senior mentor for 3 years, consistently leading teams to success, including mentoring global semifinalists and coordinating multiple teams per season.
+- Pioneered the "Open Calendar" initiative, democratizing access to technical and product advice for all teams and mentors across the region.
+
+**Skills:** Mentoring · Community Building · Generative AI · Google Cloud Platform (GCP) · Project Management · FinOps · Product Management · Cloud-Native Architecture · Vertex AI · Python · AI Security
 
 ### Top Bank
 **Information Security Architect**
@@ -51,8 +55,8 @@ Adaptable DevSecOps and Platform Engineer with a proven track record of bridging
 - Partnered directly with internal business customers to define acceptable risk levels, designing flexible risk assessment processes that allowed the business to move forward rapidly.
 - Designed and implemented automated processes for continuous vulnerability assessment of Docker images and continuous risk control for Kubernetes clusters.
 - Developed comprehensive security policies and audits for microservices architectures.
-**Skills:** Security Architecture · Container Security · Risk Management · Vulnerability Management · Kubernetes · Docker · Network Security
 
+**Skills:** Kubernetes · Secure SDLC · Python · Docker · DevSecOps · Architecture · Security Architecture Design · Vulnerability Management · Risk Management
 
 ### Startup
 **DevSecOps**
@@ -62,8 +66,8 @@ Adaptable DevSecOps and Platform Engineer with a proven track record of bridging
 - Designed, implemented, and maintained the Anti-Fraud system and process, including incident detection and response.
 - Managed the Bug Bounty program: triaging reports, coordinating remediation, and maintaining researcher relationships.
 - Defended the platform against active attacks and handled security incidents end-to-end.
-**Skills:** DevSecOps · Bug Bounty Management · Incident Response · Fraud Detection · CI/CD Security · Docker
 
+**Skills:** Kubernetes · Terraform · Python · Docker · DevSecOps · AWS · Fraud Detection · Incident Response · Bug Bounty Management · CI/CD Security
 
 ### JSC NOMAD Insurance
 **IT Problem Manager**
@@ -71,8 +75,8 @@ Adaptable DevSecOps and Platform Engineer with a proven track record of bridging
 - Managed IT problem and incident processes across the organization, ensuring timely resolution and coordination between teams.
 - Maintained and improved enterprise-grade hardware network infrastructure (routing, VPN, firewalls, VM hypervisors).
 - Designed and implemented centralized security event gathering (ELK) and automated antispam processes based on open-source tools.
-**Skills:** IT Service Management (ITSM) · Incident Management · Network Administration · ELK Stack · Security Operations
 
+**Skills:** IT Service Management · Incident Management · Network Administration · Elastic Stack (ELK) · Security Operations · Linux
 
 ### Tsesnabank JSC
 **Lead Antifraud Expert, Team Lead**
@@ -81,8 +85,8 @@ Adaptable DevSecOps and Platform Engineer with a proven track record of bridging
 - Designed antifraud processes and their integration into core bank processes (credit fraud, internal fraud).
 - Managed the project of selecting and deploying the enterprise antifraud platform.
 - Developed modules and scoring models for the enterprise Anti-Fraud system.
-**Skills:** Fraud Detection · Anti-Fraud Systems · Team Leadership · Python · Scoring Models · Analytics · Banking Security
 
+**Skills:** Python (Programming Language) · Analytics · Team Building · Fraud Detection · Team Leadership · Scoring Models · Banking Security
 
 ### Tsesnabank JSC
 **Information Security Expert**
@@ -90,8 +94,8 @@ Adaptable DevSecOps and Platform Engineer with a proven track record of bridging
 - Participated in PCI DSS and ISO 27001 implementation across the bank.
 - Developed information security policies and procedures.
 - Performed information security and compliance audits.
-**Skills:** PCI DSS · ISO 27001 · Security Auditing · Information Security Policy · Compliance · Project Management
 
+**Skills:** Project Management · Payment Card Industry Data Security Standard (PCI DSS) · Auditing · Architectural Design · ISO 27000 · Security Audits · Information Security Policy · Compliance Management
 
 ### JSC NOMAD Insurance
 **Information Security Expert**
@@ -99,7 +103,8 @@ Adaptable DevSecOps and Platform Engineer with a proven track record of bridging
 - Responsible for overall information security management, covering policy, compliance, incident handling, and team coordination.
 - Built and maintained enterprise network infrastructure — an early foundation in network engineering now formalized through the Google Cloud Professional Cloud Network Engineer certification.
 - Deployed information security systems and handled compliance, participating in the design of early containerized environments.
-**Skills:** Information Security · Network Security · Security Policy · Compliance · Hardware Networking
+
+**Skills:** Linux · Network Design · Internal Investigations · Network Administration · Active Directory · Information Security · Network Security · Hardware networking
 
 ## Speaking & Community Leadership
 
