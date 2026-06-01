@@ -11,11 +11,12 @@ Adaptable DevSecOps and Platform Engineer with a proven track record of bridging
 ## Top Skills
 
 - **Engineering & Infrastructure:** Cloud-Native Architecture, GCP (Cloud Run, Vertex AI, VPC, Cloud Armor), Kubernetes, Docker, Microservices Mesh, OIDC Service-to-Service Auth, GCP Networking (VPCs, firewall policies, hybrid connectivity), Platform Automation (Python, Ansible, Bash).
-- **AI & Platform:** Local LLMs, AI Quality Gates, Prompt Injection Defense (OWASP LLM), Google Cloud Model Armor, Vertex AI. *(Actively learning: ML Engineering)*
+- **AI & Platform:** AI Agents, Automated Security Reviews, Local LLMs, AI Quality Gates, Prompt Injection Defense (OWASP LLM), Google Cloud Model Armor, Vertex AI. *(Actively learning: ML Engineering)*
 - **Security & Strategy:** DevSecOps, GCP Secure Workload Design, Continuous Vulnerability Assessment, Software Composition Analysis (SCA), Bug Bounty Management, PCI DSS, Security by Design.
 
 ## Publications & Tech Blog
 
+- [Morning Security Report with Antigravity Agent](https://dev.to/gdg/morning-security-report-with-antigravity-agent-3592)
 - [Antigravity: My approach to deliver the most assured value for the least money](https://dev.to/gdg/antigravity-my-approach-to-deliver-the-most-assured-value-for-the-least-money-3iip)
 - [How to build a custom AI quality gate on Cloud Run from zero to production](https://dev.to/gdg/how-to-build-a-custom-ai-quality-gate-on-cloud-run-from-zero-to-production-1odp)
 - [Architecture Documentation as a First-Class Engineering Asset](https://dev.to/gdg/architecture-documentation-as-a-first-class-engineering-asset-4a1j)
